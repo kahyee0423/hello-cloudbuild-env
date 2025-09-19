@@ -29,12 +29,14 @@ are copied over to the _production_ branch of the _env_ repository.
 # Pipeline Execution in Cloud Build
 Once the pipeline is configured, every commit to the master branch of the app repository will trigger a new build. You can monitor the status and history of these deployments directly in the Google Cloud Build console.
 
-Dashboard View
+1. Dashboard View
 
 The dashboard provides a high-level summary of the latest build status, average build duration, and the overall pass/fail rate.
 ![Dashboard View](cloud-build-2.png)
 
-Build History
+2. Build History
 
 The "History" page provides a detailed log of every deployment attempt. From here, you can see the status of each build, inspect its logs, and re-run a specific job to roll back to a previous successful deployment.
 ![Build History](cloud-build-1.png)
+
+Link to hello-cloudbuild-app: https://github.com/kahyee0423/hello-cloudbuild-app.git
