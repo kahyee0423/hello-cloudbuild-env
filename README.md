@@ -1,15 +1,11 @@
 # GitOps-style Continuous Delivery For Kubernetes Engine With Cloud Build
 
-This repository contains the code used in the
-[GitOps-style Continuous Delivery with Cloud Build](https://cloud.google.com/kubernetes-engine/docs/tutorials/gitops-cloud-build)
-tutorial.
-
 GitOps is a Continuous Delivery approach [first described by Weaveworks](https://www.weave.works/blog/gitops-operations-by-pull-request) that is
 popular in the Kubernetes community. A key part of GitOps is the idea of
 "environments-as-code": describing your deployments declaratively by files (for
 example, Kubernetes manifests) stored in a Git repository.
 
-In this tutorial, you create a CI/CD pipeline that automatically builds a
+In this project, I create a CI/CD pipeline that automatically builds a
 container image from commited code, stores the image in Google Artifact
 Registry, updates a Kubernetes manifest in a Git repository and triggers a
 deployment to Kubernetes Engine using that manifest.
@@ -23,10 +19,9 @@ pushed to the _candidate_ branch of the _env_ repository. This triggers the actu
 deployment in Kubernetes. Once the deployment is finished, the new manifests
 are copied over to the _production_ branch of the _env_ repository.
 
-In the end, you have a system where:
 * The _candidate_ branch is a history of the deployment attempts.
 * The _production_ branch is a history of the successful deployments.
-* You have a view of successful and failed deployments in Cloud Build.
-* You can rollback to any previous deployment by re-executing the corresponding
+* Have a glance of view of successful and failed deployments in Cloud Build.
+* Can rollback to any previous deployment by re-executing the corresponding
   job in Cloud Build. A rollback also updates the _production_ branch to
   truthfully reflect the history of deployments.
