@@ -25,3 +25,16 @@ are copied over to the _production_ branch of the _env_ repository.
 * Can rollback to any previous deployment by re-executing the corresponding
   job in Cloud Build. A rollback also updates the _production_ branch to
   truthfully reflect the history of deployments.
+
+# Pipeline Execution in Cloud Build
+Once the pipeline is configured, every commit to the master branch of the app repository will trigger a new build. You can monitor the status and history of these deployments directly in the Google Cloud Build console.
+
+Dashboard View
+
+The dashboard provides a high-level summary of the latest build status, average build duration, and the overall pass/fail rate.
+![Dashboard View](cloud-build-2.png)
+
+Build History
+
+The "History" page provides a detailed log of every deployment attempt. From here, you can see the status of each build, inspect its logs, and re-run a specific job to roll back to a previous successful deployment.
+![Build History](cloud-build-1.png)
